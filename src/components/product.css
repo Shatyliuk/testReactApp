@@ -1,0 +1,10 @@
+img {
+    max-width: 20rem;
+}
+.list__item {
+    list-style-type: none;
+}
+.wrapper {
+    display: flex;
+    align-items: center
+}
