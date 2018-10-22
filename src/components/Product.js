@@ -19,9 +19,6 @@ class Product extends Component {
                 <li className="list__item">Price: {product.price}, {product.currency}</li>
               </ul>
             </div>
-            
-            
-          
           </li>
       );
     }

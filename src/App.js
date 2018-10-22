@@ -32,20 +32,25 @@ class App extends Component {
       inputValue: evt.target.value
     })
   }
-
   filterList(event) {
     event.preventDefault();
 
-    const updatedList = this.state.products.filter((item) => {
-      return item.name.toLowerCase().includes(this.state.inputValue.toLocaleLowerCase())
-    })
+    if (this.state.inputValue) {
+      const updatedList = this.state.products.filter((item) => {
+        return item.name.toLowerCase().includes(this.state.inputValue.toLocaleLowerCase())
+      })
 
-    this.setState({
-      filter: true,
-      filteredList: updatedList
-    })
+      this.setState({
+        filter: true,
+        filteredList: updatedList
+      })
+    } else {
+      this.setState({
+        filter: false,
+        filteredList: []
+      })
+    }
   }
-
 
   render() {
     const products = this.state.filter ? this.state.filteredList : this.state.products;
