@@ -1,6 +1,76 @@
-.search-input {
-  width: 100%;
-  height: 3rem;
-  font-size: 2rem;
-  padding: .3rem
+.aside {
+    transform: translateX(-100%)
+}
+.aside.open {
+    max-width: 30rem;
+    height: 100vh;
+    position: fixed;
+    z-index: 999;
+    transform: translateX(0);
+    transition: .3s
+}
+
+.navbar {
+    height: 100%;
+}
+.navbar.close {
+    display: none;
+}
+.container-fluid {
+    transition: .3s
+}
+
+.hamb {
+    position: fixed;
+    margin: 1rem 0;
+    width: 3.5rem;
+    height: 3rem;
+    z-index: 999;
+    display: block;
+    margin-left: 2rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    transition: .3s
+}
+.hamb.open {
+    margin-left: 20rem;
+    position: fixed;
+}
+.hamb__line {
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    left: 0;
+    background-color: #000;
+    transition: .3s;
+}
+.hamb__line:nth-child(1) {
+    top: 0;
+}
+.hamb.open .hamb__line:nth-child(1) {
+    transform: rotate(-45deg);
+    top: 14px;
+}
+.hamb__line:nth-child(2) {
+    top: 50%;
+    transform: translate(0, -50%)
+}
+.hamb.open .hamb__line:nth-child(2) {
+    display: none;
+}
+.hamb__line:nth-child(3) {
+    bottom: 0;
+}
+.hamb.open .hamb__line:nth-child(3) {
+    transform: rotate(45deg);
+    bottom: 12px;
+}
+li[role^='presentation'] {
+    list-style-type: none;
+    font-size: 2rem;
+    margin: 1.5rem;
+}
+form {
+    padding-top: 5rem;
 }

@@ -1,0 +1,6 @@
+.open {
+    transform: translateX(0)
+}
+.navbar {
+    transform: translateX(-100%)
+}
